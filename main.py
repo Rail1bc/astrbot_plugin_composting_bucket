@@ -18,14 +18,14 @@ class MyPlugin(Star):
     @filter.on_llm_request()
     async def query_memory(self, event: AstrMessageEvent, req: ProviderRequest):
         """[事件钩子] 在 LLM 请求前，检查历史上下文长度并处理"""
-        await self.check_message_length(self)
+        await self.check_message_length(req)
 
     # 检查消息长度
     async def check_message_length(self, req: ProviderRequest):
         self.logger.info("检查消息上下文长度,当前长度:" + str(len(req.contexts)))
         if(len(req.contexts) >= self.config.max_len*2):
             self.logger.info("消息上下文长度到达标准:" + self.config.max_len + ",开始弹出旧消息")
-            await self.pop_messages(self)
+            await self.pop_messages(req)
 
     # 弹出上下文历史中的旧消息
     async def pop_messages(self ,req: ProviderRequest):

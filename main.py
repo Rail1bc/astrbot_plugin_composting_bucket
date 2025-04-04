@@ -24,7 +24,7 @@ class MyPlugin(Star):
     async def check_message_length(self, req: ProviderRequest):
         self.logger.info("检查消息上下文长度,当前长度:" + str(len(req.contexts)))
         if(len(req.contexts) >= self.config.max_len*2):
-            self.logger.info("消息上下文长度到达标准:" + self.config.max_len + ",开始弹出旧消息")
+            self.logger.info("消息上下文长度到达标准:" + str(self.config.max_len) + ",开始弹出旧消息")
             await self.pop_messages(req)
 
     # 弹出上下文历史中的旧消息

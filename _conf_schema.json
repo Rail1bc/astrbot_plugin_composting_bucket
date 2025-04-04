@@ -1,13 +1,13 @@
 {
   "max_len":{
-    "description":"上下文最大容量",
+    "description":"堆肥桶容量",
     "type":"int",
     "hint":"达到最大容量，进行一次清理，最大容量应小于 最多携带对话数量(条) (max_context_length)",
     "obvious_hint":true,
     "default":200
   },
   "pop_len":{
-    "description":"出肥量",
+    "description":"排出消息量",
     "type":"int",
     "hint":"每次清理消息的轮数，应小于 上下文最大容量 (max_len)",
     "obvious_hint":true,

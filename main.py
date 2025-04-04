@@ -7,7 +7,7 @@ from astrbot.api.provider import ProviderRequest
 
 from typing import List, Dict
 
-@register("helloworld", "YourName", "一个简单的 Hello World 插件", "1.0.0")
+@register("CompostingBucket", "Rail1bc", "一个用于降低AstrBot的deepseek api调用费用的插件", "0.1")
 class MyPlugin(Star):
     def __init__(self, context: Context , config:dict ):
         super().__init__(context)

@@ -68,3 +68,6 @@
      - https://github.com/lxfight/astrbot_plugin_mnemosyne
    - 排出消息量 (pop_len) 不宜过于接近 堆肥桶容量 (max_len) 
      - 这会导致保留的上下文过少，影响互动质量
+   - 对命中缓存计费问题进行数学建模
+     - 对于 max_len 与 pop_len 的取值，如何取，能综合对话质量与计费效益？
+     - 如果您擅长数学建模，或对解决这个问题有心得，欢迎您提交issue 讨论！

@@ -30,7 +30,7 @@ class MyPlugin(Star):
     # 弹出上下文历史中的旧消息
     async def pop_messages(self ,req: ProviderRequest):
         self.logger.info("开始弹出旧消息")
-        self.logger.info(str(req.contexts))
+        del req.contexts[:self.config.pop_len*2]
 
 
 

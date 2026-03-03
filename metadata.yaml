@@ -1,6 +1,6 @@
 name: astrbot_plugin_composting_bucket
-desc: 一个用于降低AstrBot的deepseek api调用费用的插件
+desc: 一个用于收集被 “丢弃/压缩” 的上下文的插件
 help: 无命令
-version: v0.1
+version: v0.2
 author: Rail1bc
 repo: https://github.com/Rail1bc/astrbot_plugin_composting_bucket
